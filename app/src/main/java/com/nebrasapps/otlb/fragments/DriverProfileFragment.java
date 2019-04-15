@@ -295,7 +295,7 @@ public class DriverProfileFragment extends Fragment {
             uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    Uri downloadUrl = taskSnapshot.getDownloadUrl();
+                    Uri downloadUrl = taskSnapshot.getUploadSessionUri();
 
                     userInfo.put("profileImageUrl", downloadUrl.toString());
                     //updating user data and making loadingbar view gone
